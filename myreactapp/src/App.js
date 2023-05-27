@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello';
+import Header from './components/Header';
 
 function App() {
+
+  let name = "vishu"
   return (
     <>
+    <Header myName = {name}/>
+    <Hello/>
       <div className="body">
         <h1 className="head">Linked<span>in</span></h1>
         <div className="section">
