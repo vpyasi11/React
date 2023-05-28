@@ -34,9 +34,7 @@ function App() {
   }
 
   function increment(){
-    console.log(num);
     setNum(num+1)
-    console.log(num);
   }
   function decrement(){
     setNum(num-1)
@@ -56,6 +54,11 @@ function App() {
       my counter 
       <button onClick={decrement}>-</button>{num}
       <button onClick={increment}>+</button>
+
+      <div>
+        <Header name={name} setName={setName}></Header>
+        <Footer name={name}></Footer>
+      </div>
     </>
     
   );
