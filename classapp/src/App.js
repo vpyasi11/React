@@ -40,6 +40,8 @@ function App() {
     setNum(num-1)
   }
 
+  const [showTitlePage, setTitlePage] = useState(true)
+
   return (
     // <>
     //   <Header myName = {obj.name} myAge={obj.age}/>
@@ -47,8 +49,8 @@ function App() {
     // </>
 
     <>
-      my organization name is {name}
-      <button onClick={handleClick}>Change the name</button><br></br>
+      {/* my organization name is {name}
+      <button onClick={handleClick}>Change the name</button><br></br> */}
       
       
       my counter 
@@ -56,8 +58,8 @@ function App() {
       <button onClick={increment}>+</button>
 
       <div>
-        <Header name={name} setName={setName}></Header>
-        <Footer name={name}></Footer>
+        <Header name={name} setName={setName} showTitlePage={showTitlePage} setTitlePage={setTitlePage}></Header>
+        {/* <Footer name={name}></Footer> */}
       </div>
     </>
     
