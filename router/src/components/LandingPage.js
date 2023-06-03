@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+// axios : library --> npm i axios then import
+import axios from 'axios'
 
 // use effect
 // hook responsible for side effects (loading after all rendering) like api calling, some kind of dom manipulation
@@ -13,9 +15,21 @@ export default function LandingPage() {
     useEffect(()=> {
 
         console.log("I am useEffect : loads in last after rendering all the content of this component");
-        console.log(document.querySelector(".header"))
+        // console.log(document.querySelector(".header"))
 
-    },[counter])
+        const apicalling = async()=> {
+            try{
+                let response = await axios.get('https://dummyjson.com/products')
+                console.log(response);
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
+
+        apicalling()
+
+    },[])
     // [] :dependency array
         // case 1: dependency array is empty --> useffect runs only singlr time when the page renders
         // case 2: dependency array has some state or props --> whenever the state or props change, useffect will be trigerred that many times 
