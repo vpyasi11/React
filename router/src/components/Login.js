@@ -12,7 +12,7 @@ export default function Login() {
         <input type="text" placeholder='abc@gmail.com'/>
         <h4>Password</h4>
         <input type="password" placeholder='123456'/><br/>
-        <input type='checkbox'/>Remember me?<br/>
+        {/* <input type='checkbox'/> */}
         <button id='btn'>LOGIN</button><br/>
         <h6>Forgot Password?</h6>
         <i class="fa fa-google"></i>
