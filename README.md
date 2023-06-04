@@ -1,12 +1,32 @@
 # React Learnings (Hero Vired)
 ## About Project
-<p>This project is about useeffect</p>
+ 
+ This project is about learning React framework. So far we have completed following : 
+
+    - States and props  
+    - useffect
+    - components
+    - hooks
+    - routes
+    - api calling
+
+
+
 
 ```js
-<div className='body'>
-        <div className='box'>
-        <h2>LOGIN</h2>
-        <h4>Email</h4>
-        </div>
-</div>
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/landingPage' element={<LandingPage/>}/>
+      </Routes>
+    </>
+  );
+}
 ```
+### List of Routes
++ http://localhost:3000/
++ http://localhost:3000/login
++ http://localhost:3000/landingPage
