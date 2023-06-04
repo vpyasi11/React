@@ -2,8 +2,18 @@
 
 ** In react, two types of components - functional(using functions) and class components(to be deprecated)
 
-# Mounting/ updating/ unmounting
+# Mounting/ updating/ unmounting (lifecycle for functional components)
 
-    > Mounting: 
+    > Mounting (Phase I): 
       - When component load for first browser paint
-      - 
+      - the jsx/html loads -> inserted into browser realDOM
+      - Inner Phase -> componentwillmount
+      - state or props (useState) will mount first 
+
+    > Updating (Phase II):
+      - when components updates
+      - Inner Phase -> componentwillupdate
+
+    > Unmounting (Phase III):
+      - Component removed from browser
+      - Inner Phase -> componentwillunmount

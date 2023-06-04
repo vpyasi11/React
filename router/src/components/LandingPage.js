@@ -13,7 +13,7 @@ export default function LandingPage() {
     console.log("loads first");
     // console.log(document.querySelector(".header")) --> wont work as header not yet loaded
 
-    // has a callback function and dependency array
+    // has a callback function and dependency array and also a cleanup function (return - unmounting/clean any aftereffect given to components)
     useEffect(() => {
 
         console.log("I am useEffect : loads in last after rendering all the content of this component");
