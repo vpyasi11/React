@@ -17,3 +17,10 @@
     > Unmounting (Phase III):
       - Component removed from browser
       - Inner Phase -> componentwillunmount
+
+
+# Prop drilling:
+    when you try to pass props down to multiple levels(A-B-C-D)
+
+# Centralized component : having access to all props and all component access props from it
+  --> useContext, createContext, contextProvider
