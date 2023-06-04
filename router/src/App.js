@@ -3,6 +3,7 @@ import './App.css';
 import {Routes,Route} from 'react-router-dom'
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Home from './components/Home';
 import LandingPage from './components/LandingPage';
 // Install : npm i react-router-dom
   // import routes,route from it
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/landingPage' element={<LandingPage/>}/>
+        <Route path='/home' element={<Home/>}/>
       </Routes>
     </>
   );

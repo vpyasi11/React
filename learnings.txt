@@ -1,0 +1,9 @@
+// Component lifecycle methods (Mounting/ updating/ unmounting)
+
+** In react, two types of components - functional(using functions) and class components(to be deprecated)
+
+# Mounting/ updating/ unmounting
+
+    > Mounting: 
+      - When component load for first browser paint
+      - 

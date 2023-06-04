@@ -45,7 +45,7 @@ export default function LandingPage() {
             {/* <button onClick={() => { setCounter(counter + 1) }}>+</button>
             {counter} */}
 
-            <div>
+            
                 {
                     // product.map(ele=>(<div> {ele.title}</div>))
                     product.length !== 0 ? product.map((element) => (
@@ -54,13 +54,15 @@ export default function LandingPage() {
                             <div>
                             <div>{element.title}</div>
                             <div>{element.brand}</div>
+                            <button>View</button>
+                            <button>Add to cart</button>
                             </div>
                         </div>
                     )):<div>No products found</div>
                 
                 }
 
-            </div>
+            
         </div>
     )
 }
