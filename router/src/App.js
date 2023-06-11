@@ -6,6 +6,8 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import LandingPage from './components/LandingPage';
 import Profile from './components/Profile';
+import {useCookies} from 'react-cookie'
+
 // Install : npm i react-router-dom
   // import routes,route from it
   // import browser router in index.js and wrap <app/> inside browserrouter tag
@@ -13,6 +15,10 @@ import Profile from './components/Profile';
   //create routes
 
 function App() {
+
+  const [cookies, setCookie, removeCookies] = useCookies('name')
+  setCookie('name','vishu')
+
   return (
     <>
       <Routes>
@@ -22,6 +28,7 @@ function App() {
         <Route path='/home' element={<Home/>}/>
         <Route path='/' element={<Profile/>}/>
       </Routes>
+      {/* <button onClick={()={removeCookies('name')}}></button> */}
     </>
   );
 }

@@ -7,6 +7,7 @@ export default function Profile(){
     const [user, setUser] = useState('vishu')
     const [age, setAge] = useState(27)
 
+    // increasing performance as act as cache memory
     const value = useMemo(
         ()=> ({ user, setUser, age, setAge})
     )
