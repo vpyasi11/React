@@ -9,6 +9,7 @@ import Profile from './components/Profile';
 import {useCookies} from 'react-cookie'
 import RCookies from './components/RCookies';
 import ViewProduct from './components/ViewProduct';
+import UseRef from './components/UseRef';
 
 // Install : npm i react-router-dom
   // import routes,route from it
@@ -31,6 +32,7 @@ function App() {
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/' element={<RCookies/>}/>
         <Route path='/view/:id' element={<ViewProduct/>}/>
+        <Route path='/useref' element={<UseRef/>}/>
       </Routes>
       {/* <button onClick={()={removeCookies('name')}}></button> */}
     </>
