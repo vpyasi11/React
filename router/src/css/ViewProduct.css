@@ -1,0 +1,10 @@
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.info{
+    margin: 20px;
+    width: 300px;
+}
