@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // axios : library --> npm i axios then import
 import axios from 'axios'
 import '../css/LandingPage.css'
+import { Link } from 'react-router-dom'
 
 // use effect
 // hook responsible for side effects (loading after all rendering) like api calling, some kind of dom manipulation
@@ -16,13 +17,13 @@ export default function LandingPage() {
     // has a callback function and dependency array and also a cleanup function (return - unmounting/clean any aftereffect given to components)
     useEffect(() => {
 
-        console.log("I am useEffect : loads in last after rendering all the content of this component");
+        // console.log("I am useEffect : loads in last after rendering all the content of this component");
         // console.log(document.querySelector(".header"))
 
         const apicalling = async () => {
             try {
                 let response = await axios.get('https://dummyjson.com/products')
-                console.log(response);
+                // console.log(response);
                 getProduct(response.data.products)
             }
             catch (error) {
@@ -38,7 +39,7 @@ export default function LandingPage() {
     // case 2: dependency array has some state or props --> whenever the state or props change, useffect will be trigerred that many times 
 
     console.log("loads second");
-    console.log(product)
+    // console.log(product)
 
     return (
         <div className='header'>
@@ -54,7 +55,7 @@ export default function LandingPage() {
                             <div>
                             <div>{element.title}</div>
                             <div>{element.brand}</div>
-                            <button>View</button>
+                            <button><Link to={`/view/${element.id}`}>View</Link></button>
                             <button>Add to cart</button>
                             </div>
                         </div>

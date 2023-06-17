@@ -7,6 +7,8 @@ import Home from './components/Home';
 import LandingPage from './components/LandingPage';
 import Profile from './components/Profile';
 import {useCookies} from 'react-cookie'
+import RCookies from './components/RCookies';
+import ViewProduct from './components/ViewProduct';
 
 // Install : npm i react-router-dom
   // import routes,route from it
@@ -26,7 +28,9 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/landingPage' element={<LandingPage/>}/>
         <Route path='/home' element={<Home/>}/>
-        <Route path='/' element={<Profile/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/' element={<RCookies/>}/>
+        <Route path='/view/:id' element={<ViewProduct/>}/>
       </Routes>
       {/* <button onClick={()={removeCookies('name')}}></button> */}
     </>
